@@ -5,7 +5,6 @@ t =list('abcdefghijklmnopqrstuvwxyz')
 for x in word:
     x=x.lower()
     res[t.index(x)] +=1
-print(res)
 m = max(res)
 if res.count(m)>1:
     print('?')
