@@ -1,5 +1,4 @@
 import sys 
-sys.setrecursionlimit(10**6) 
 
 def add_star(x):
     if x ==1:
