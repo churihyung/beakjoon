@@ -11,13 +11,9 @@ cnt =0
 
 while True:
     for i,x in enumerate(a):
-        if i ==0:
+        if x[0]>=e_time:
             cnt+=1
             e_time=x[1]
-        else:
-            if x[0]>=e_time:
-                cnt+=1
-                e_time=x[1]
             
         
     break
