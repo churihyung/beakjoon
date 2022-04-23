@@ -1,30 +1,20 @@
 n = int(input())
-a = list(map(int,input().split()))
+cards = list(map(int, input().split(' ')))
+cards.sort()
+
 m = int(input())
-b = list(map(int,input().split()))
+targets = list(map(int, input().split(' ')))
 
-a.sort()
-res = [0]*m
-for i,x in enumerate(b):
-    lt =0
-    rt = len(a)-1
+dic = dict()
 
+for i in cards:
+    if i in dic:
+        dic[i] += 1
+    else:
+        dic[i] = 1
 
-    while lt <rt:
-        mid = (lt+rt)//2
-        if a[mid] > x:
-            rt = mid -1
-        elif a[mid] < x:
-            lt = mid +1
-        elif a[mid] == x:
-            rt = mid
-
-    print(a[rt])
-    for y in a[rt:]:
-        if y == x:
-            res[i]+=1
-        else:
-            break
-
-for x in res:
-    print(x,end=' ')
+for i in range(m):
+    if targets[i] in dic:
+        print(dic[targets[i]], end=' ')
+    else:
+        print(0, end=' ')
