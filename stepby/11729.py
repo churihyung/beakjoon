@@ -1,5 +1,6 @@
 import sys 
 
+# 20220531 복습
 def hanoi(n,from_,other,to):
     if n ==1:
         a.append([from_,to])
